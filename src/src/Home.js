@@ -27,7 +27,7 @@ class Home extends Component {
       alert("can't be negative");
       return;
     }
-    const price = window.web3.utils.toWei(p.toString(), 'Ether');
+    const price = window.web3.utils.toWei(this.imagePrice.value.toString(), 'Ether');
     //console.log("Submitting file to ipfs...")
     this.setState({ loading:true });
     ipfs.add(this.state.buffer, (error, result) => {
